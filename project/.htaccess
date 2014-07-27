@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^hoc-htaccess.html$ /day4/index.php [L]
+RewriteRule ^([a-z]+)
