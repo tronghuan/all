@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<script>
+		$(document).ready(function(){ 
+           
+          // Sự kiện khi nhấn vào các tab của menu 
+          $("a.tab").click(function () { 
+                
+                
+               // tắt tất cả các tab 
+               $(".active").removeClass("active"); 
+                
+               // bật tab đang click lên 
+               $(this).addClass("active"); 
+                
+               // tạo hiệu ứng trượt lên trên cho nội dung của tab đang click 
+               $(".content").slideUp(); 
+                
+               // Nếu là tab đầu tiên thì set hiệu ứng là trượt xuống dưới 
+               var content_show = $(this).attr("title"); 
+               $("#"+content_show).slideDown(); 
+             
+          }); 
+      
+       });
+	</script>
+</head>
+<body>
+<div class="tabbed_area"> 
+     
+          
+        <ul class="tabs"> 
+            <li><a href="#" title="content_1" class="tab active">Topics</a></li> 
+            <li><a href="#" title="content_2" class="tab">Archives</a></li> 
+            <li><a href="#" title="content_3" class="tab">Pages</a></li> 
+        </ul> 
+        
+        <div id="content_1" class="content"> 
+             <p>Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day 
+             Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day </p> 
+        </div> 
+        <div id="content_2" class="content"> 
+             <p>Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day 
+             Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day </p> 
+        </div> 
+        <div id="content_3" class="content"> 
+             <p>Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day 
+             Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day Noi dung o day </p> 
+        </div> 
+     
+    </div>
+</body>
+</html>

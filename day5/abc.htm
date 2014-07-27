@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="GallerySoft.info" />
+    <script src="jquery.js" ></script>
+	<title>Untitled 3</title>
+    <style>
+    body {
+        border: solid 1px gray;
+        border-radius: 4px;
+        padding: 10px;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .cmt-box {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+    .cmt-box p:nth-child(2n+1) {
+        background: gray;
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+
+
+<input id="txtComment"/><button id="btnDone" type="button">Done</button>
+
+
+<h2>Comment</h2>
+
+<div class="cmt-box">
+</div>
+
+</body>
+<script>
+    $('#btnDone').click(function() {
+        var comment = $('#txtComment').val();
+        
+        var curDate = new Date();
+        
+        $('.cmt-box').append('<p><small>' + curDate.toString() + '</small><br>' + comment + '<br/><a onclick="return false;" class="delete">Delete</a></p>');
+        
+        $('.delete').click(function() {
+            var parent = $(this).parent();
+            
+            parent.slideToggle(2000, function() { $(this).remove(); });
+        });
+    });
+</script>
+</html>

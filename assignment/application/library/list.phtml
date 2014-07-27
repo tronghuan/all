@@ -1,0 +1,31 @@
+<form action="/smartosc/FRESHER05/day4/default/cart/updatecart" method="post">
+<table border='1' cellspacing='0' cellpadding='0' width='500'>
+        <tr>
+            <td>Student Name</td>
+            <td>Email</td>
+            <td>Address</td>
+            <td>Gender</td>
+            <td>Country</td>
+            <td>Phone</td>
+        </tr>
+        <?php
+            if(isset($listStudent) && $listStudent != null ) {
+                foreach($listStudent as $listStudent)
+                {
+                    echo "<tr>";
+                    echo "<td>".$listStudent['name']."</td>";
+                    echo "<td>".$listStudent['email']."</td>";
+                    echo "<td>".$listStudent['address']."</td>";
+                    echo "<td>".$listStudent['gender']."</td>";
+                    echo "<td>".$listStudent['country']."</td>";
+                    echo "<td>".$listStudent['phone']."</td>";
+                    
+
+                    echo "</tr>";
+                }
+            }
+        ?>
+</table>
+
+<input type="submit" value="Update" name="btnok" /> 
+</form>

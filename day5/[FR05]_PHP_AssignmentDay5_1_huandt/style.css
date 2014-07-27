@@ -1,0 +1,51 @@
+html,body,div,span,h1,h2,h3,h4,h5,h6,
+p,a,font,img,b,u,i,ol,ul,li,fieldset,form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+
+	width: 800px;
+	font-size: 62.5%;
+	font-family: tahoma, arial, sans-serif;
+	line-height: 2em;
+	background-image: url('anh/BG_BODY.png');
+}
+
+#toan_bo_trang {
+
+}
+
+#header_mntren_banner{
+	position: relative;
+}
+
+#header{
+	position: absolute;
+	top: 10px;
+	left: 100px;
+}
+#menu_tren {
+	margin: 10px;
+	position: absolute;
+	top: 80px;
+	left: 80px;
+}
+#menu_tren ul li{
+	list-style: none;
+	color: #ffffff;
+	font-size: 10px;
+	font-weight: bold;
+	display: inline;
+	padding: 8px 14px 8px 14px;
+	background-image: url('anh/center.png');
+}
+
+
+

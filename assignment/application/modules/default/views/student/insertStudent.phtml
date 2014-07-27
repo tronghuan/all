@@ -1,0 +1,59 @@
+<meta charset="utf-8" />
+<style>
+    label{
+        float: left;
+        width: 100px;
+    }
+    input{
+        margin-bottom: 5px;
+    }
+    .error{
+        color:red;
+    }
+</style>
+<?php
+    
+?>
+<form action="" method="post">
+    <label>Full name</label>
+    <input type="text" name="txtname" value="<?php echo isset($_POST['txtname'])?$_POST['txtname']:"" ?>" />
+    <span class="error">
+        <?php echo isset($errorName) ? $errorName : ""; ?>  
+    </span>
+    <br />
+    <label>Email</label>
+    <input type="text" name="txtemail" value="<?php echo isset($_POST['txtemail'])?$_POST['txtemail']:"" ?>" />
+    <span class="error">
+        <?php echo isset($errorEmail) ? $errorEmail : ""; ?>  
+    </span>
+    <br />
+    <label>Address</label>
+    <input type="text" name="txtaddress" value="<?php echo isset($_POST['txtaddress'])?$_POST['txtaddress']:"" ?>" />
+    <span class="error">
+        <?php echo isset($errorAddress) ? $errorAddress : ""; ?>  
+    </span>
+    <br />
+    <label>Phone</label>
+    <input type="text" name="txtphone" value="<?php echo isset($_POST['txtphone'])?$_POST['txtphone']:"" ?>" />
+    <span class="error">
+        <?php echo isset($errorPhone) ? $errorPhone : ""; ?>  
+    </span>
+    <br />
+    <label>Country</label>
+    <input type="text" name="txtcountry" value="<?php echo isset($_POST['txtcountry'])?$_POST['txtcountry']:"" ?>" />
+    <span class="error">
+        <?php echo isset($errorCountry) ? $errorCountry : ""; ?>  
+    </span>
+    <br />
+    <label>Gender</label>
+    Male&nbsp;<input type="radio" name="gender" value="1" <?php echo isset($_POST['gender'])&&$_POST['gender']==1?"checked":"" ?>  />
+    Famale&nbsp;<input type="radio" name="gender" value="2" <?php echo isset($_POST['gender'])&&$_POST['gender']==2?"checked":"" ?>  />
+    <span class="error">
+        <?php echo isset($errorGender) ? $errorGender : ""; ?>  
+    </span>
+    <br />
+    <label>&nbsp;</label>
+    <input type="submit" name="btnok" value="getInfo" />
+</form>
+<?php
+    ?>

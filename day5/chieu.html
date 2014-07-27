@@ -1,0 +1,27 @@
+<html>
+<head>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+    $("a").click(function(){
+        var id = $(this).attr("id");
+        $.ajax({
+            url: "process.php",
+            type: "POST",
+            data: "id="+id,
+            async: true,
+            success: function(kq){
+                alert(kq);
+            }
+        })
+    })
+});
+</script>
+</head>
+<body>
+<a href="#" id="1">Link1</a>
+<a href="#" id="2">Link1</a>
+<a href="#" id="3">Link1</a>
+<a href="#" id="4">Link1</a>
+</body>
+</html>

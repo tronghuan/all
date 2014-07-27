@@ -1,0 +1,54 @@
+<style>
+*{
+    margin 0px;
+    padding 0px;
+}
+    .page{
+        width: 1000px;
+        text-align:right;
+        
+        display:block;
+        
+    }
+
+</style>
+<table border='1' cellspacing='0' cellpadding='0' width='1000'>
+        <tr>
+            <td width="15%"  >Student Name</td>
+            <td width="20%">Email</td>
+            <td width="15%">Address</td>
+            <td width="10%">Gender</td>
+            <td width="10%">Country</td>
+            <td width="10%">Phone</td>
+            <td width="10%">Delete</td>
+            <td width="10%">Update</td>
+        </tr>
+        <?php
+            if(isset($listStudent) && $listStudent != null ) {
+                foreach($listStudent as $listStudent)
+                {
+                    echo "<tr>";
+                    echo "<td>".$listStudent['name']."</td>";
+                    echo "<td>".$listStudent['email']."</td>";
+                    echo "<td>".$listStudent['address']."</td>";
+                    echo "<td>".$listStudent['gender']."</td>";
+                    echo "<td>".$listStudent['country']."</td>";
+                    echo "<td>".$listStudent['phone']."</td>";
+                    echo "<td><a href ='/day4/assignment/default/student/deleteStudent/".$listStudent['id']."'>Delete</a></td>";
+                    echo "<td><a href ='/day4/assignment/default/student/updateStudent/".$listStudent['id']."'>Update</a></td>";
+                    echo "</tr>";
+                }
+            }
+        ?>
+</table>
+<div class="page">
+<?php
+    
+    for($i=1;$i<=$data['numPage'];$i++)
+    {
+        echo "<a href ='/day4/assignment/default/student/listStudent/$i'>$i&nbsp&nbsp</a>";
+    }
+    
+?>
+</div>
+<a href="/day4/assignment/default/student/insertStudent">Insert</a>

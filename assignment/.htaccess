@@ -1,0 +1,7 @@
+RewriteEngine Off
+RewriteRule ^([a-z]).html$ /day4/assignment/demo.php [L]
+
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/([a-zA-Z]+)$ /day4/assignment/index.php?module=$1&controller=$2&action=$3 [L]
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/deleteStudent/([0-9]+)$ /day4/assignment/index.php?module=$1&controller=$2&action=deleteStudent&id=$3 [L]
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/listStudent/([0-9]+)$ /day4/assignment/index.php?module=$1&controller=$2&action=listStudent&page=$3 [L]
+RewriteRule ^([a-zA-Z]+)/([a-zA-Z]+)/updateStudent/([0-9]+)$ /day4/assignment/index.php?module=$1&controller=$2&action=updateStudent&id=$3 [L]
