@@ -3,6 +3,6 @@ class config
 {
     const hostname = "localhost";
     const username = "root";
-    const password = "consistency";
+    const password = "";
     const dbname   = "fr05";
 }

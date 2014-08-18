@@ -1,5 +1,5 @@
 <?php
-$conn = mysql_connect('localhost', 'root', 'consistency');
+$conn = mysql_connect('localhost', 'root', '');
 $db = mysql_select_db('qlbansua');
 
 if(!isset($_GET['page'])){
